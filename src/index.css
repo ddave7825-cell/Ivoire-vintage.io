@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-vibrant-emerald: #10B981;
+  --color-vibrant-orange: #F97316;
+  --color-vibrant-amber: #FBBF24;
+  --color-vibrant-warm: #FFF7ED;
+  --color-vibrant-border: #FED7AA;
+}
+
+body {
+  background-color: var(--color-vibrant-warm);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* System-Wide Dark Mode Overrides for pristine contrast and consistency */
+body.dark .bg-slate-50 {
+  background-color: #0f172a !important;
+}
+
+body.dark .bg-white {
+  background-color: #1e293b !important;
+}
+
+body.dark .text-neutral-950,
+body.dark .text-neutral-900,
+body.dark .text-neutral-800 {
+  color: #f8fafc !important;
+}
+
+body.dark .text-neutral-700,
+body.dark .text-neutral-650,
+body.dark .text-neutral-600 {
+  color: #cbd5e1 !important;
+}
+
+body.dark .text-neutral-550,
+body.dark .text-neutral-555,
+body.dark .text-neutral-500,
+body.dark .text-neutral-450 {
+  color: #94a3b8 !important;
+}
+
+body.dark .border-neutral-200,
+body.dark .border-neutral-150,
+body.dark .border-neutral-100,
+body.dark .border-vibrant-border {
+  border-color: #334155 !important;
+}
+
+/* Inputs, Select fields and Textareas */
+body.dark input:not([type="checkbox"]):not([type="radio"]),
+body.dark textarea,
+body.dark select {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark input:focus,
+body.dark textarea:focus,
+body.dark select:focus {
+  border-color: var(--color-vibrant-emerald) !important;
+}
+
+/* Semi-transparent decorative backgrounds */
+body.dark .bg-orange-50\/45,
+body.dark .bg-orange-50\/35,
+body.dark .bg-orange-50\/20,
+body.dark .bg-orange-50\/15,
+body.dark .bg-[#FFF7ED] {
+  background-color: rgba(30, 41, 59, 0.45) !important;
+  border-color: #334155 !important;
+}
+
+body.dark .bg-neutral-50 {
+  background-color: #0f172a !important;
+}
+
+body.dark .bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  color: #34d399 !important;
+}
+
+body.dark .bg-amber-50 {
+  background-color: rgba(251, 191, 36, 0.1) !important;
+  color: #fbbf24 !important;
+}
+
+body.dark .bg-orange-50 {
+  background-color: rgba(249, 115, 22, 0.1) !important;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Friperie Ivoirienne",
+  "description": "Boutique e-commerce de vêtements de seconde main chic en Côte d'Ivoire avec système de paiement mobile (Wave, Orange, MTN, Moov) et design moderne.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
